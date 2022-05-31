@@ -1,5 +1,16 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
+    <panel-navbar/>
   </div>
 </template>
+
+<script>
+import PanelNavbar from '../components/PanelNavbar.vue'
+
+export default {
+  name: 'AboutView',
+  components: {
+    'panel-navbar': PanelNavbar
+  }
+}
+</script>

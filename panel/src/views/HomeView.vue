@@ -1,18 +1,30 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <panel-navbar ilk="oyuncu siralamasi"/>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import PanelNavbar from '../components/PanelNavbar.vue';
 
 export default {
   name: 'HomeView',
   components: {
-    HelloWorld
+    'panel-navbar': PanelNavbar
+  },
+  data() {
+    return {
+      links: ['Clan Sıralaması', 'Player Sıralaması', 'Upgrade Oranları', 'Power Up Store']
+    }
+  },
+  methods: {
+    selamVerme(playerName) {
+      alert('Hoş geldin ' + playerName);
+    }
   }
 }
 </script>
+
+<style>
+
+</style>
